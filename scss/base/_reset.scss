@@ -1,3 +1,4 @@
+@import "../utils/mixins";
 *,
 *::after,
 *::before {
@@ -26,6 +27,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: $secondary-ff;
 }
 main {
   flex-grow: 1;
@@ -35,12 +37,79 @@ h1 {
 }
 .container {
   width: 100%;
-  max-width: 1200px; // Bu o'zgaruvchan.
+  max-width: 1270px; // Bu o'zgaruvchan.
   margin-left: auto;
   margin-right: auto;
   padding-left: 5rem;
   padding-right: 5rem;
+  @include respond(768px) {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
 }
 // margin, padding, border-radius, font-size, gap, -> rem;
 // width, heightni -> max va pxda bering.
 // line-height -> lh / font-size qilib bering.
+.text {
+  &-xs {
+    font-size: $font-7;
+    font-weight: 400;
+    line-height: $ls-7;
+  }
+  &-sm {
+    font-size: $font-6-m;
+    font-weight: 600;
+    line-height: $lh-6-m;
+  }
+  &-md {
+    font-size: $font-5;
+    font-family: $main-ff;
+    font-weight: 600;
+    line-height: $lh-5;
+  }
+  &-lg {
+    font-size: $font-2;
+    font-weight: 600;
+    line-height: $lh-2;
+  }
+  &-xl {
+    font-size: $font-1;
+    line-height: $lh-1;
+    font-weight: 700;
+  }
+}
+.btn {
+  width: fit-content;
+  padding: 2rem 2.4rem;
+  border: 3px solid $neutral-900;
+  display: flex;
+  align-items: center;
+  color: $neutral-900;
+  border-radius: 0.8rem;
+  gap: 1.6rem;
+  &:focus {
+    background: linear-gradient(90deg, #ffe2d1 0%, #fff5ef 100%);
+  }
+}
+
+.lavel {
+  @include flex($gap: 1.2rem);
+  @include respond(400px) {
+    @include flex($direction: column);
+  }
+  &__img {
+    margin-bottom: 0.4rem;
+  }
+  &__text {
+    color: #385159;
+  }
+}
+.order-1 {
+  order: 1;
+}
+.responsive-img {
+  @include respond(xl) {
+    width: 80vw;
+    height: 80vw;
+  }
+}

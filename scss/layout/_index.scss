@@ -1,0 +1,63 @@
+@import "../utils/mixins";
+/* Read */
+.read {
+  margin-bottom: 12rem;
+  @include respond(xl) {
+    margin-bottom: 8rem;
+  }
+  &__container {
+    @include flex($gap: 8rem, $align: center);
+    @include respond(xl) {
+      flex-direction: column;
+    }
+  }
+  &__img {
+    border-radius: 1rem;
+    @include respond(xl) {
+      order: 1;
+    }
+    @include respond(560px) {
+      width: 100%;
+      max-width: 350px;
+      height: 320px;
+    }
+  }
+  &__title {
+    margin-bottom: 3.4rem;
+    color: $neutral-900;
+  }
+  &__title-2 {
+    letter-spacing: -2px;
+  }
+  &__description {
+    @include flex($gap: 1.4rem, $align: center);
+    color: $neutral-700;
+    font-weight: 400;
+    margin-bottom: 2.4rem;
+    font-family: $main-ff;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../assets/icon-check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__description-2 {
+    font-family: $main-ff;
+    font-weight: 400;
+    color: $neutral-700;
+  }
+  .club {
+    display: inline-block;
+    background-image: url("../assets/pattern-circle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+    background-position: top 10px right;
+  }
+}

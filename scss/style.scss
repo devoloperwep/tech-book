@@ -1,11 +1,12 @@
 @import "./vendors/normalize.scss";
+@import "./base/typography";
 @import "./utils/variables";
+@import "./base/reset";
 @import "./utils/mixins";
 @import "./utils/functions";
-@import "./base/typography";
-@import "./base/reset";
 @import "./components/buttons.scss";
 @import "./layout/header";
 @import "./layout/forms";
 @import "./layout/footer";
 @import "./pages/home";
+@import "layout/index";
