@@ -1,0 +1,55 @@
+.footer {
+  background-color: $neutral-900;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding-top: 8rem;
+  @include respond(lg) {
+    padding-top: 6.4rem;
+  }
+  @include respond(sm) {
+    padding-top: 4.8rem;
+  }
+  &__container {
+    @include flex($direction: column, $align: center);
+    color: $neutral-100;
+  }
+  &__title {
+    color: $neutral-100;
+    width: 100%;
+    max-width: 685px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    @include respond(sm) {
+      font-size: $font-2-m;
+    }
+  }
+  &__btn {
+    color: $neutral-100;
+    border-color: $neutral-100;
+  }
+  &__body {
+    width: 100%;
+    padding-top: 2.4rem;
+    padding-bottom: 2.9rem;
+    border-top: 1px solid $neutral-700;
+    margin-top: 6.4rem;
+    @include flex($justify: space-between, $align: center);
+    @include respond(sm) {
+      @include flex(
+        $justify: center,
+        $align: center,
+        $wrap: wrap,
+        $gap: 1.6rem
+      );
+    }
+    &-description {
+      font-size: $font-7;
+      color: #fff;
+    }
+    &-icons {
+      @include flex($gap: 2.4rem);
+    }
+  }
+}
