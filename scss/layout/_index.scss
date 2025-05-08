@@ -60,4 +60,70 @@
     z-index: 1;
     background-position: top 10px right;
   }
+  &__content {
+    order: 1;
+    &-img {
+      margin-left: -7rem;
+      margin-top: -15rem;
+      @include respond(md) {
+        margin-left: 30rem;
+      }
+      @include respond(450px) {
+        display: none;
+      }
+    }
+  }
+}
+/* Travel */
+.travel {
+  margin-bottom: 12rem;
+  @include respond(lg) {
+    display: none;
+  }
+  &__container {
+    padding: 8rem 6rem;
+    background-color: $neutral-100;
+    background-image: url("../assets/pattern-light-bg.svg");
+  }
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 530px;
+    margin-bottom: 8rem;
+  }
+  &__list {
+    @include flex($justify: space-between, $align: center, $wrap: wrap);
+  }
+  &__item {
+    width: 250px;
+    &-content {
+      @include flex($justify: space-between);
+    }
+    &-title {
+      font-size: $font-4;
+      line-height: 1;
+      border: 2px solid $neutral-900;
+      padding: 1rem 1.4rem;
+      border-radius: 0.4rem;
+    }
+  }
+}
+.travel__container {
+}
+.container {
+}
+.travel__title {
+}
+.text-lg {
+}
+.travel__list {
+}
+.travel__item {
+}
+.travel__item-content {
+}
+.travel__item-title {
+}
+.travel__item-description {
 }
